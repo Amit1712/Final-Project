@@ -1,0 +1,138 @@
+const products = [
+  {
+    id: "1",
+    name: "Men Ring",
+    catID: "1",
+    img: "http://pngimg.com/uploads/ring/ring_PNG104.png",
+    desc: "This is a nice jewel",
+    price: "145.95",
+  },
+  {
+    id: "2",
+    name: "Men Necklace",
+    catID: "2",
+    img: "http://pngimg.com/uploads/necklace/necklace_PNG42.png",
+    desc: "This is a nice jewel",
+    price: "125.0",
+  },
+  {
+    id: "3",
+    name: "Men Watch",
+    catID: "3",
+    img: "https://i.ndtvimg.com/mt/cooks/2014-11/carrots.jpg",
+    desc: "This is a nice jewel",
+    price: "150.99",
+  },
+  {
+    id: "4",
+    name: "Men Earrings",
+    catID: "4",
+    img: "https://cdn.britannica.com/77/170677-050-F7333D51/lettuce.jpg",
+    desc: "This is a nice jewel",
+    price: "199.99",
+  },
+  {
+    id: "5",
+    name: "Women Ring",
+    catID: "5",
+    img: "http://pngimg.com/uploads/ring/ring_PNG104.png",
+    desc: "This is a nice jewel",
+    price: "125.0",
+  },
+  {
+    id: "6",
+    name: "Women Necklace",
+    catID: "6",
+    img: "http://pngimg.com/uploads/necklace/necklace_PNG42.png",
+    desc: "This is a nice jewel",
+    price: "145.95",
+  },
+
+  {
+    id: "7",
+    name: "Women Watch",
+    catID: "7",
+    img: "https://i.ndtvimg.com/mt/cooks/2014-11/carrots.jpg",
+    desc: "This is a nice jewel",
+    price: "150.99",
+  },
+
+  {
+    id: "8",
+    name: "Women Earring",
+    catID: "8",
+    img:
+      "https://media.istockphoto.com/photos/tomato-isolated-on-white-background-picture-id466175630?k=6&m=466175630&s=612x612&w=0&h=fu_mQBjGJZIliOWwCR0Vf2myRvKWyQDsymxEIi8tZ38=",
+    desc: "This is a nice jewel",
+    price: "145.95",
+  },
+  {
+    id: "9",
+    name: "Men Ring",
+    catID: "1",
+    img: "http://pngimg.com/uploads/ring/ring_PNG104.png",
+    desc: "This is a nice jewel",
+    price: "145.95",
+  },
+  {
+    id: "10",
+    name: "Men Necklace",
+    catID: "2",
+    img: "http://pngimg.com/uploads/necklace/necklace_PNG42.png",
+    desc: "This is a nice jewel",
+    price: "125.0",
+  },
+  {
+    id: "11",
+    name: "Men Watch",
+    catID: "3",
+    img: "https://i.ndtvimg.com/mt/cooks/2014-11/carrots.jpg",
+    desc: "This is a nice jewel",
+    price: "150.99",
+  },
+  {
+    id: "12",
+    name: "Men Earrings",
+    catID: "4",
+    img: "https://cdn.britannica.com/77/170677-050-F7333D51/lettuce.jpg",
+    desc: "This is a nice jewel",
+    price: "199.99",
+  },
+  {
+    id: "13",
+    name: "Women Ring",
+    catID: "5",
+    img: "http://pngimg.com/uploads/ring/ring_PNG104.png",
+    desc: "This is a nice jewel",
+    price: "125.0",
+  },
+  {
+    id: "14",
+    name: "Women Necklace",
+    catID: "6",
+    img: "http://pngimg.com/uploads/necklace/necklace_PNG42.png",
+    desc: "This is a nice jewel",
+    price: "145.95",
+  },
+
+  {
+    id: "15",
+    name: "Women Watch",
+    catID: "7",
+    img: "https://i.ndtvimg.com/mt/cooks/2014-11/carrots.jpg",
+    desc: "This is a nice jewel",
+    price: "150.99",
+  },
+
+  {
+    id: "16",
+    name: "Women Earring",
+    catID: "8",
+    img:
+      "https://media.istockphoto.com/photos/tomato-isolated-on-white-background-picture-id466175630?k=6&m=466175630&s=612x612&w=0&h=fu_mQBjGJZIliOWwCR0Vf2myRvKWyQDsymxEIi8tZ38=",
+    desc: "This is a nice jewel",
+    price: "145.95",
+  },
+];
+
+export default products;
