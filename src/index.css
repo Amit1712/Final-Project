@@ -146,3 +146,7 @@ body {
     width: 100%;
   }
 }
+
+li>div {
+  height: 100%;
+}

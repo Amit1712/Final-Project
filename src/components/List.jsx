@@ -3,7 +3,7 @@ import CardDeck from "react-bootstrap/CardDeck";
 import ProductThumbnail from "./ProductThumbnail";
 import products from "../products.js";
 
-function createProductThumbnail(product) {
+function ProductThumb({ product }) {
   return (
     <ProductThumbnail
       key={product.id}
@@ -16,8 +16,25 @@ function createProductThumbnail(product) {
   );
 }
 
-function List() {
-  return <CardDeck>{products.map(createProductThumbnail)}</CardDeck>;
+function List(props) {
+  function mapProductsArr(product, index) {
+    return <ProductThumb product={product} key={index} />;
+  }
+  return (
+    <CardDeck className="p-3">{props.products.map(mapProductsArr)}</CardDeck>
+  );
 }
 
-export default List;
+function Full_List() {
+  let curIndex = 0;
+  return products.map((product, index) => {
+    if (index === curIndex) {
+      const curProducts = products.slice(curIndex, curIndex + 4);
+      curIndex += 4;
+      return <List products={curProducts} key={index} />;
+    }
+    return <></>;
+  });
+}
+
+export default Full_List;

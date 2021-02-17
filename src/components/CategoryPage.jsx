@@ -1,5 +1,5 @@
 import React from "react";
-import List from "./List";
+import ItemsList from "./List";
 import { Container, Row, Col, Form, Carousel } from "react-bootstrap";
 
 function CategoryPage() {
@@ -64,13 +64,7 @@ function CategoryPage() {
       </Row>
       <Row>
         <Col lg={12} className="p-3">
-          <List />
-        </Col>
-        <Col lg={12} className="p-3">
-          <List />
-        </Col>
-        <Col lg={12} className="p-3">
-          <List />
+          <ItemsList />
         </Col>
       </Row>
     </Container>
