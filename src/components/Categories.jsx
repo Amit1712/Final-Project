@@ -4,7 +4,7 @@ import { men, women } from "../categories.js";
 
 function createCatCard(category) {
   return (
-    <Card className="text-black" key={category.id}>
+    <Card className="text-black catCard" key={category.id}>
       <a href={`cat/${category.id}`}>
         <Card.Img src={category.src} alt={`Category${category.id}`} />
         <Card.ImgOverlay>
@@ -16,11 +16,11 @@ function createCatCard(category) {
 }
 
 function Men() {
-  return <CardDeck>{men.map(createCatCard)}</CardDeck>;
+  return <CardDeck className="h-100">{men.map(createCatCard)}</CardDeck>;
 }
 
 function Women() {
-  return <CardDeck>{women.map(createCatCard)}</CardDeck>;
+  return <CardDeck className="h-100">{women.map(createCatCard)}</CardDeck>;
 }
 
 function CategoryThumbs() {

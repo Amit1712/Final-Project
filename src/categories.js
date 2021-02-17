@@ -12,7 +12,7 @@ const men = [
   {
     id: 3,
     name: `Men's Watches`,
-    src: `https://freepngimg.com/thumb/watch/5-2-watch-png-hd.png`,
+    src: `https://images.pexels.com/photos/125779/pexels-photo-125779.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940`,
   },
   {
     id: 4,

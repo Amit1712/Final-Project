@@ -10,7 +10,7 @@ library.add(faShoppingCart);
 
 function ProductThumbnail(props) {
   return (
-    <Card className="w-100 d-lg-block">
+    <Card className="w-100 d-lg-block" key={props.id}>
       <Link to={`/product/${props.id}`}>
         <Card.Img alt="product-img" src={props.img} variant="top" />
       </Link>

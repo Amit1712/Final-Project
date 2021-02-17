@@ -24,7 +24,7 @@ function Footer() {
           <FontAwesomeIcon icon="envelope" />
         </a>
       </div>
-      <span> &copy; Copyright 1982 - {year} Diamondz</span>
+      <span> &copy; Copyright 1949 - {year} Diamondz</span>
     </footer>
   );
 }

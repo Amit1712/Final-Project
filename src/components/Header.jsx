@@ -49,7 +49,7 @@ function Header() {
                   Women's Earrings
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="/specials">Specials</Nav.Link>
+              <Nav.Link href="/newsletter">Newsletter</Nav.Link>
               <Form inline>
                 <Form.Control
                   id="searchBox"

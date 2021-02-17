@@ -3,15 +3,14 @@ import CardDeck from "react-bootstrap/CardDeck";
 import ProductThumbnail from "./ProductThumbnail";
 import products from "../products.js";
 
-function ProductThumb({ product }) {
+function ProductThumb(props) {
   return (
     <ProductThumbnail
-      key={product.id}
-      id={product.id}
-      name={product.name}
-      img={product.img}
-      desc={product.desc}
-      price={product.price}
+      id={props.product.id}
+      name={props.product.name}
+      img={props.product.img}
+      desc={props.product.desc}
+      price={props.product.price}
     />
   );
 }

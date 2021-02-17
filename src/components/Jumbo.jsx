@@ -4,15 +4,16 @@ import { Jumbotron, Col } from "react-bootstrap";
 function Jumbo() {
   return (
     <Col lg={12}>
-      <Jumbotron fluid className="mb-auto">
-        <h1>Fluid jumbotron</h1>
+      <Jumbotron fluid className="mb-auto jumbo">
+        <h1>Diamondz Jewelry Store</h1>
         <p>
-          This is a modified jumbotron that occupies the entire horizontal space
-          of its parent.
+          Welcome to Diamondz where all our jewels come from South-Africa, we
+          use 100% AUTHENTIC blood diamonds.
         </p>
         <p>
-          This is a modified jumbotron that occupies the entire horizontal space
-          of its parent.
+          Please register if you haven't already or use the login to enter our
+          customers club for special offers, monthly sales and our weekly
+          newsletter!
         </p>
       </Jumbotron>
     </Col>
