@@ -10,6 +10,7 @@ import Form from "react-bootstrap/Form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import logo from "../logo.png";
 
 library.add(faShoppingCart);
 
@@ -24,7 +25,9 @@ function Header() {
           variant="dark"
           className="navbar"
         >
-          <Navbar.Brand href="/">Diamondz</Navbar.Brand>
+          <Navbar.Brand href="/">
+            <img src={logo} alt="brand-logo" id="brandLogo" className="mb-1" />
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
@@ -49,7 +52,7 @@ function Header() {
                   Women's Earrings
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="/newsletter">Newsletter</Nav.Link>
+              <Nav.Link href="/blog">Blog</Nav.Link>
               <Form inline>
                 <Form.Control
                   id="searchBox"

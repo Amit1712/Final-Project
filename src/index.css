@@ -17,6 +17,7 @@ body {
 }
 
 .footer {
+  bottom: 0;
   background-color: #343a40;
   color: rgba(255, 255, 255, .5);
   justify-content: center;
@@ -109,6 +110,10 @@ body {
   padding: 4rem;
 }
 
+.w-fitC {
+  width: fit-content;
+}
+
 #footer-icons {
   text-align: center;
   padding-bottom: 15px;
@@ -159,6 +164,35 @@ body {
     margin: 10px auto;
     width: 100%;
   }
+}
+
+#loginForm {
+  margin: 0 auto;
+  width: fit-content
+}
+
+#loginForm>div {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+#loginForm>input {
+  margin: 5px;
+}
+
+#registerForm {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+#registerForm>div {
+  width: inherit;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+#brandLogo {
+  width: 140px;
 }
 
 li>div {

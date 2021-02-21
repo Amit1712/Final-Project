@@ -10,19 +10,30 @@ function CategoryPage() {
       </Row>
       <Row>
         <Col sm={4}>
+          <div
+            className="form"
+            style={{ border: "none", padding: "0 15px 15px" }}
+          >
+            <Form.Label>Filter by</Form.Label>
+            <Form.Control as="select" custom>
+              <option value="">Price: Low to Highest</option>
+              <option value="">Price: High to Lowest</option>
+              <option value="">Rating</option>
+            </Form.Control>
+          </div>
           <Form className="form">
             <Form.Group className="mb-auto">
               <Form.Label htmlFor="priceRange">
-                Price Range (0.99$ - 99.99$)
+                Price Range (19.99$ - 999.99$)
               </Form.Label>
               <Form.Control type="range" id="priceRange" />
-              <Form.Check label="Fruits" className="mb-2" />
-              <Form.Check label="Veggies" className="mb-2" />
-              <Form.Check label="Snacks" className="mb-2" />
-              <Form.Check label="Canned Food" className="mb-2" />
-              <Form.Check label="Beverages" className="mb-2" />
-              <Form.Check label="Pharma" className="mb-2" />
-              <Form.Check label="Toiletries" className="mb-2" />
+              <Form.Check label="Gold" className="mb-2" />
+              <Form.Check label="Silver" className="mb-2" />
+              <Form.Check label="Bronze" className="mb-2" />
+              <Form.Check label="White Gold" className="mb-2" />
+              <Form.Check label="Platinum" className="mb-2" />
+              <Form.Check label="Copper" className="mb-2" />
+              <Form.Check label="Gemstones" className="mb-2" />
             </Form.Group>
           </Form>
           <Form className="form">
@@ -37,7 +48,7 @@ function CategoryPage() {
           </Form>
         </Col>
         <Col lg={8}>
-          <Carousel className="salesCarousel">
+          <Carousel className="salesCarousel" style={{ paddingTop: "15px" }}>
             <Carousel.Item className="carouselImg" interval={2000}>
               <img
                 className="d-block w-100"

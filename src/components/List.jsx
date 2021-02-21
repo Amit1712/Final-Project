@@ -32,7 +32,7 @@ function Full_List() {
       curIndex += 4;
       return <List products={curProducts} key={index} />;
     }
-    return <></>;
+    return null;
   });
 }
 

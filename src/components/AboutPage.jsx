@@ -3,8 +3,8 @@ import Jumbo from "./Jumbo";
 
 function AboutPage() {
   return (
-    <div>
-      <h1> This is the about us page</h1>
+    <div style={{ backgroundColor: "#e9ecef" }}>
+      <h1> Our story begins...</h1>
       <Jumbo />
       <Jumbo />
     </div>
