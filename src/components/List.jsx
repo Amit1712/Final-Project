@@ -1,7 +1,7 @@
 import React from "react";
 import CardDeck from "react-bootstrap/CardDeck";
 import ProductThumbnail from "./ProductThumbnail";
-import products from "../products.js";
+// import products from "../products.js";
 
 function ProductThumb(props) {
   return (
@@ -24,7 +24,7 @@ function List(props) {
   );
 }
 
-function Full_List() {
+function Full_List({ products }) {
   let curIndex = 0;
   return products.map((product, index) => {
     if (index === curIndex) {

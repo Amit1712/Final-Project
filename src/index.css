@@ -84,7 +84,7 @@ body {
   width: 85%;
 }
 
-.productImg img {
+#prodImgBig {
   border: 1px solid black;
   width: 100%;
   height: 80%;
@@ -98,6 +98,7 @@ body {
 }
 
 .catCard {
+  height: inherit;
   min-height: 40vh;
 }
 
@@ -112,6 +113,19 @@ body {
 
 .w-fitC {
   width: fit-content;
+}
+
+.catCard a {
+  height: inherit;
+}
+
+.thumbs img {
+  height: inherit;
+  width: 100%;
+}
+
+.thumbs div {
+  width: 33%;
 }
 
 #footer-icons {

@@ -1,4 +1,5 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import { Row, Col, Form, Button, Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -50,23 +51,33 @@ function ItemsCarousel(props) {
 }
 
 function ProductPage() {
+  let { id } = useParams();
+  const product = products.find((p) => Number(p.id) === Number(id));
+  console.log(product);
   return (
     <Container fluid>
       <Row className="p-3">
         <Col lg={6}>
           <div className="form productImg">
-            <img
-              src="https://www.kaspersky.com/content/en-global/images/product-icon-KSOS.png"
-              alt="prodimage"
-            />
-            <div className="thumbs">bla bla sum thumbs</div>
+            <img src={product.img} alt="prodimage" id="prodImgBig" />
+            <div className="thumbs">
+              <div className="d-inline-block w-30">
+                <img src={product.img} alt="product" />
+              </div>
+              <div className="d-inline-block w-30">
+                <img src={product.img} alt="product" />
+              </div>
+              <div className="d-inline-block w-30">
+                <img src={product.img} alt="product" />
+              </div>
+            </div>
           </div>
         </Col>
         <Col lg={6}>
           <Form className="form" id="productListing">
-            <h2>Product Name</h2>
-            <h5>Description</h5>
-            <h5>Price:</h5>
+            <h2>{product.name}</h2>
+            <h5>{product.desc}</h5>
+            <h5>${product.price}</h5>
             <Form.Label className="d-block">Choose quantity</Form.Label>
             <Form.Control as="select" custom>
               <option value="1">1</option>

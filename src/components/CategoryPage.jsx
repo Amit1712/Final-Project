@@ -1,12 +1,18 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import ItemsList from "./List";
 import { Container, Row, Col, Form, Carousel } from "react-bootstrap";
+import { men, women } from "../categories.js";
+import products from "../products.js";
 
 function CategoryPage() {
+  let { id } = useParams();
+  const categories = [...men, ...women];
+  const category = categories.find((cat) => cat.id === Number(id));
   return (
     <Container fluid>
       <Row className="p-4">
-        <h2 className="m-auto">Category Name</h2>
+        <h2 className="m-auto">{category.name}</h2>
       </Row>
       <Row>
         <Col sm={4}>
@@ -75,7 +81,11 @@ function CategoryPage() {
       </Row>
       <Row>
         <Col lg={12} className="p-3">
-          <ItemsList />
+          <ItemsList
+            products={products.filter(
+              (prod) => Number(prod.catID) === Number(category.id)
+            )}
+          />
         </Col>
       </Row>
     </Container>

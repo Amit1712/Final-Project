@@ -21,7 +21,6 @@ import { Container, Row } from "react-bootstrap";
 
 function ScrollToTop(props) {
   const { pathname } = useLocation();
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
@@ -40,12 +39,13 @@ function App() {
           <Switch>
             <Route path="/" exact component={Homepage} />
             <Route path="/about" exact component={AboutPage} />
-            <Route path="/cat" component={CategoryPage} />
+            <Route path="/cat/:id" component={CategoryPage} />
             {/*TO-FIX - needs dynamic cat pages*/}
-            <Route path="/product" component={ProductPage} />
+            <Route path="/product/:id" component={ProductPage} />
             {/*TO-FIX - needs dynamic prod pages*/}
             <Route path="/blog" exact component={Blog} />
-            <Route path="/blog/post" component={BlogPost} />
+            <Route path="/blog/post/:id" component={BlogPost} />
+            {/*TO-FIX - needs dynamic post pages*/}
             <Route path="/signup" exact component={Signup} />
             <Route path="/login" exact component={Login} />
             <Route path="/cart" exact component={Cart} />
