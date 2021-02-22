@@ -4,8 +4,18 @@ import { Container, Row, Col } from "react-bootstrap";
 import articles from "../articles.js";
 
 function BlogPost() {
+  const chunkStr = (str, n, acc) => {
+    if (str.length === 0) {
+      return acc;
+    } else {
+      acc.push(str.substring(0, n));
+      return chunkStr(str.substring(n), n, acc);
+    }
+  };
   let { id } = useParams();
   const post = articles.find((art) => art.id === Number(id));
+  const articleBody = chunkStr(post.content, 165, []);
+
   return (
     <Container fluid>
       <Row>
@@ -17,7 +27,11 @@ function BlogPost() {
         </Col>
       </Row>
       <Row className="p-4">
-        <Col lg={12}>{post.content}</Col>
+        <Col lg={12}>
+          {articleBody.map((line, index) => {
+            return <p key={index}>{line}</p>;
+          })}
+        </Col>
       </Row>
     </Container>
   );
