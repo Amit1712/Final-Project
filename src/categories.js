@@ -2,12 +2,12 @@ const men = [
   {
     id: 1,
     name: `Men's Rings`,
-    src: `http://pngimg.com/uploads/ring/ring_PNG104.png`,
+    src: `https://cdn.shopify.com/s/files/1/0255/3230/1372/products/Titanium_Steel_Skulls_Biker_Ring_Spinsyde.jpg?v=1570427924`,
   },
   {
     id: 2,
     name: `Men's Necklaces`,
-    src: `http://pngimg.com/uploads/necklace/necklace_PNG42.png`,
+    src: `https://www.zales.com/productimages/processed/V-20300755_0_400.jpg`,
   },
   {
     id: 3,
@@ -17,7 +17,8 @@ const men = [
   {
     id: 4,
     name: `Men's Earrings`,
-    src: "http://pngimg.com/uploads/jewelry/jewelry_PNG6823.png",
+    src:
+      "https://imgaz1.chiccdn.com/thumb/large/oaupload/newchic/images/5E/50/18e9304d-ee8b-460f-b888-69330943afed.jpg",
   },
 ];
 const women = [
@@ -34,7 +35,7 @@ const women = [
   {
     id: 7,
     name: `Women's Watches`,
-    src: `https://freepngimg.com/thumb/watch/5-2-watch-png-hd.png`,
+    src: `https://crivellishopping.pl/image/cache/data/Prodotti/michael-kors/mk4340-michael-kors-800x800.jpg`,
   },
   {
     id: 8,

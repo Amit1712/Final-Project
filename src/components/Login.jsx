@@ -1,24 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
+import { useForm } from "react-hook-form";
 import { Container, Row, Button, Col, Form } from "react-bootstrap";
 
 function Login() {
-  const [userInfo, setUserInfo] = useState({
-    userName: "",
-    password: "",
-    FName: "",
-    LName: "",
-  });
-
-  function handleChange(event) {
-    const { value, name } = event.target;
-    setUserInfo((prevVal) => {
-      return { ...prevVal, [name]: value };
-    });
-  }
-
-  function handleClick() {
-    console.log("sent data to server");
-  }
+  const { register, handleSubmit, errors } = useForm();
+  const onLogin = (data) => {
+    console.log("user logged in");
+    console.log(data);
+  };
 
   return (
     <Container fluid>
@@ -27,30 +16,51 @@ function Login() {
           <div className="w-fitC m-auto pb-5">
             <h1 className="m-auto p-2">Login to our exclusive club!</h1>
           </div>
-          <form className="form" id="loginForm">
+          <form
+            className="form"
+            id="loginForm"
+            onSubmit={handleSubmit(onLogin)}
+          >
             <div>
-              <h2>Hello {userInfo.userName}</h2>
+              <h2>Hello User</h2>
             </div>
             <div className="p-3">
-              <Form.Control
-                type="text"
-                onChange={handleChange}
-                name="userName"
-                placeholder="Username:"
-                value={userInfo.userName}
-                className="d-flex p-1 m-2"
-              />
-              <Form.Control
-                type="password"
-                onChange={handleChange}
-                name="password"
-                placeholder="Password:"
-                value={userInfo.password}
-                className="d-flex p-1 m-2"
-              />
+              <div className="m-1">
+                <Form.Control
+                  type="text"
+                  name="email"
+                  ref={register({ required: true })}
+                  placeholder="Email:"
+                  className="d-flex p-1 m-2"
+                />
+                {errors.email && (
+                  <span className="invalid-feedback d-flex p-1">
+                    This field is required
+                  </span>
+                )}
+              </div>
+              <div className="m-1">
+                <Form.Control
+                  type="password"
+                  name="password"
+                  ref={register({ required: true, minLength: 8 })}
+                  placeholder="Password:"
+                  className="d-flex p-1 m-2"
+                />
+                {errors.password && (
+                  <span className="invalid-feedback d-flex p-1">
+                    This field is required - minimum 8 characters
+                  </span>
+                )}
+              </div>
+              <div>
+                <small>
+                  <a href="/">I forgot my password</a>
+                </small>
+              </div>
             </div>
             <div className="p-3">
-              <Button variant="dark" onClick={handleClick}>
+              <Button variant="dark" type="submit">
                 Login
               </Button>
             </div>

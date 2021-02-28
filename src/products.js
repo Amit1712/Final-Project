@@ -6,6 +6,7 @@ const products = [
     img: "http://pngimg.com/uploads/ring/ring_PNG104.png",
     desc: "This is a nice jewel",
     price: "145.95",
+    size: "",
   },
   {
     id: "2",
@@ -14,6 +15,7 @@ const products = [
     img: "http://pngimg.com/uploads/necklace/necklace_PNG42.png",
     desc: "This is a nice jewel",
     price: "125.0",
+    size: "",
   },
   {
     id: "3",
@@ -22,6 +24,7 @@ const products = [
     img: "https://freepngimg.com/thumb/watch/5-2-watch-png-hd.png",
     desc: "This is a nice jewel",
     price: "150.99",
+    size: "",
   },
   {
     id: "4",
@@ -30,6 +33,7 @@ const products = [
     img: "http://pngimg.com/uploads/jewelry/jewelry_PNG6823.png",
     desc: "This is a nice jewel",
     price: "199.99",
+    size: "",
   },
   {
     id: "5",
@@ -38,6 +42,7 @@ const products = [
     img: "http://pngimg.com/uploads/ring/ring_PNG104.png",
     desc: "This is a nice jewel",
     price: "125.0",
+    size: "",
   },
   {
     id: "6",
@@ -46,6 +51,7 @@ const products = [
     img: "http://pngimg.com/uploads/necklace/necklace_PNG42.png",
     desc: "This is a nice jewel",
     price: "145.95",
+    size: "",
   },
 
   {
@@ -55,6 +61,7 @@ const products = [
     img: "https://freepngimg.com/thumb/watch/5-2-watch-png-hd.png",
     desc: "This is a nice jewel",
     price: "150.99",
+    size: "",
   },
 
   {
@@ -64,6 +71,7 @@ const products = [
     img: "http://pngimg.com/uploads/jewelry/jewelry_PNG6823.png",
     desc: "This is a nice jewel",
     price: "145.95",
+    size: "",
   },
   {
     id: "9",
@@ -72,6 +80,7 @@ const products = [
     img: "http://pngimg.com/uploads/ring/ring_PNG104.png",
     desc: "This is a nice jewel",
     price: "145.95",
+    size: "",
   },
   {
     id: "10",
@@ -80,6 +89,7 @@ const products = [
     img: "http://pngimg.com/uploads/necklace/necklace_PNG42.png",
     desc: "This is a nice jewel",
     price: "125.0",
+    size: "",
   },
   {
     id: "11",
@@ -88,6 +98,7 @@ const products = [
     img: "https://freepngimg.com/thumb/watch/5-2-watch-png-hd.png",
     desc: "This is a nice jewel",
     price: "150.99",
+    size: "",
   },
   {
     id: "12",
@@ -96,6 +107,7 @@ const products = [
     img: "http://pngimg.com/uploads/jewelry/jewelry_PNG6823.png",
     desc: "This is a nice jewel",
     price: "199.99",
+    size: "",
   },
   {
     id: "13",
@@ -104,6 +116,7 @@ const products = [
     img: "http://pngimg.com/uploads/ring/ring_PNG104.png",
     desc: "This is a nice jewel",
     price: "125.0",
+    size: "",
   },
   {
     id: "14",
@@ -112,6 +125,7 @@ const products = [
     img: "http://pngimg.com/uploads/necklace/necklace_PNG42.png",
     desc: "This is a nice jewel",
     price: "145.95",
+    size: "",
   },
 
   {
@@ -121,6 +135,7 @@ const products = [
     img: "https://freepngimg.com/thumb/watch/5-2-watch-png-hd.png",
     desc: "This is a nice jewel",
     price: "150.99",
+    size: "",
   },
 
   {
@@ -130,6 +145,7 @@ const products = [
     img: "http://pngimg.com/uploads/jewelry/jewelry_PNG6823.png",
     desc: "This is a nice jewel",
     price: "145.95",
+    size: "",
   },
 ];
 

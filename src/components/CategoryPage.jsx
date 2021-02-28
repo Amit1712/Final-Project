@@ -16,17 +16,6 @@ function CategoryPage() {
       </Row>
       <Row>
         <Col sm={4}>
-          <div
-            className="form"
-            style={{ border: "none", padding: "0 15px 15px" }}
-          >
-            <Form.Label>Filter by</Form.Label>
-            <Form.Control as="select" custom>
-              <option value="">Price: Low to Highest</option>
-              <option value="">Price: High to Lowest</option>
-              <option value="">Rating</option>
-            </Form.Control>
-          </div>
           <Form className="form">
             <Form.Group className="mb-auto">
               <Form.Label htmlFor="priceRange">
@@ -52,27 +41,38 @@ function CategoryPage() {
               <Form.Check type="radio" label="Free" className="mb-2" />
             </Form.Group>
           </Form>
+          <div
+            className="form"
+            style={{ border: "none", padding: "15px 15px 0" }}
+          >
+            <Form.Label>Filter by</Form.Label>
+            <Form.Control as="select" custom>
+              <option value="">Price: Low to Highest</option>
+              <option value="">Price: High to Lowest</option>
+              <option value="">Rating</option>
+            </Form.Control>
+          </div>
         </Col>
         <Col lg={8}>
           <Carousel className="salesCarousel" style={{ paddingTop: "15px" }}>
             <Carousel.Item className="carouselImg" interval={2000}>
               <img
                 className="d-block w-100"
-                src="https://i.ndtvimg.com/mt/cooks/2014-11/carrots.jpg"
+                src={category.src}
                 alt="First slide"
               />
             </Carousel.Item>
             <Carousel.Item className="carouselImg" interval={2000}>
               <img
                 className="d-block w-100"
-                src="https://i.ndtvimg.com/mt/cooks/2014-11/carrots.jpg"
+                src={category.src}
                 alt="Second slide"
               />
             </Carousel.Item>
             <Carousel.Item className="carouselImg" interval={2000}>
               <img
                 className="d-block w-100"
-                src="https://i.ndtvimg.com/mt/cooks/2014-11/carrots.jpg"
+                src={category.src}
                 alt="Third slide"
               />
             </Carousel.Item>

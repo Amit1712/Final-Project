@@ -17,6 +17,8 @@ import BlogPost from "./BlogPost";
 import Login from "./Login";
 import Signup from "./Signup";
 import Cart from "./Cart";
+import Checkout from "./CheckoutPage";
+import AdminPage from "./AdminPage";
 import { Container, Row } from "react-bootstrap";
 
 function ScrollToTop(props) {
@@ -46,6 +48,8 @@ function App() {
             <Route path="/signup" exact component={Signup} />
             <Route path="/login" exact component={Login} />
             <Route path="/cart" exact component={Cart} />
+            <Route path="/checkout" exact component={Checkout} />
+            <Route path="/admin" exact component={AdminPage} />
           </Switch>
         </ScrollToTop>
       </Router>

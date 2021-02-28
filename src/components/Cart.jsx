@@ -21,11 +21,8 @@ function Cart() {
               {/*Item row starts here */}
               <CartItem />
               <CartItem />
-
               <CartItem />
-
               <CartItem />
-
               {/*Item row ends here */}
               <hr />
               <p className="text-primary mb-0">
@@ -70,12 +67,16 @@ function Cart() {
                     </strong>
                   </div>
                   <span>
-                    <strong id="priceFinal"></strong>
+                    <strong id="priceFinal">Final Price</strong>
                   </span>
                 </li>
               </ul>
 
-              <Button variant="dark" className="btn-block">
+              <Button
+                variant="dark"
+                className="btn-block btn-a"
+                href="/checkout"
+              >
                 Go to checkout
               </Button>
             </Card.Body>

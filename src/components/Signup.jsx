@@ -1,27 +1,26 @@
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 
 function Signup() {
-  const [userInfo, setUserInfo] = useState({
-    userName: "",
-    password: "",
+  const [display, setDisplay] = useState({
     FName: "",
     LName: "",
-    newsLetter: false,
   });
 
   function handleChange(event) {
-    console.log(event.target);
-    const { value, name } = event.target;
-    setUserInfo((prevVal) => {
-      return { ...prevVal, [name]: value };
+    const { name, value } = event.target;
+    setDisplay((prevVals) => {
+      return { ...prevVals, [name]: value };
     });
   }
 
-  function handleClick() {
-    console.log("btn clicked - user info:");
-    console.log(userInfo);
-  }
+  const { register, handleSubmit, errors } = useForm();
+  const isCountry = (country: string) => country !== "Country...";
+  const onSubmit = (data) => {
+    console.log("btn clicked - sending data");
+    console.log(data);
+  };
 
   return (
     <Container fluid>
@@ -33,63 +32,161 @@ function Signup() {
               get great deals and join thousands of happy customers!
             </h5>
           </div>
-          <form className="form p-3" id="registerForm">
+          <form
+            className="form p-3"
+            onSubmit={handleSubmit(onSubmit)}
+            id="registerForm"
+          >
             <div>
               <h2>
-                Welcome {userInfo.FName} {userInfo.LName}
+                Welcome {display.FName} {display.LName}
               </h2>
             </div>
             <Form.Row>
               <Col>
-                <Form.Label>Enter your first name:</Form.Label>
                 <Form.Control
                   type="text"
-                  placeholder="firestname"
+                  placeholder="Enter your first name"
                   name="FName"
+                  ref={register({ required: true })}
+                  value={display.FName}
                   onChange={handleChange}
-                  value={userInfo.FName}
                 />
+                {errors.FName && (
+                  <span className="invalid-feedback d-block">
+                    This field is required
+                  </span>
+                )}
               </Col>
               <Col>
-                <Form.Label>Enter your last name:</Form.Label>
                 <Form.Control
                   type="text"
-                  placeholder="lastname"
+                  placeholder="Enter your last name"
                   name="LName"
+                  ref={register({ required: true })}
+                  value={display.LName}
                   onChange={handleChange}
-                  value={userInfo.LName}
+                />
+                {errors.LName && (
+                  <span className="invalid-feedback d-block">
+                    This field is required
+                  </span>
+                )}
+              </Col>
+            </Form.Row>
+            <Form.Row>
+              <Col>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter your email address"
+                  name="email"
+                  ref={register({ required: true })}
+                />
+                {errors.email && (
+                  <span className="invalid-feedback d-block">
+                    This field is required
+                  </span>
+                )}
+              </Col>
+            </Form.Row>
+            <Form.Row>
+              <Col>
+                <Form.Control
+                  type="password"
+                  placeholder="Choose your password"
+                  name="password"
+                  ref={register({ required: true, minLength: 8 })}
+                />
+                {errors.password && (
+                  <span className="invalid-feedback d-block">
+                    This field is required - minimum length of 8
+                  </span>
+                )}
+              </Col>
+            </Form.Row>
+            <Form.Row>
+              <Col>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter your address"
+                  name="address"
+                  ref={register({ required: true })}
+                ></Form.Control>
+                {errors.address && (
+                  <span className="invalid-feedback d-block">
+                    This field is required
+                  </span>
+                )}
+              </Col>
+            </Form.Row>
+            <Form.Row>
+              <Col>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter a second address (optional)"
+                  name="address2"
+                  ref={register}
+                ></Form.Control>
+              </Col>
+            </Form.Row>
+            <Form.Row>
+              <Col lg={6} md={12} className="mb-4">
+                <select
+                  className="custom-select d-block w-100"
+                  id="country"
+                  name="country"
+                  ref={register({ required: true, validate: isCountry })}
+                >
+                  <option>Country...</option>
+                  <option>United States</option>
+                </select>
+                {errors.country && (
+                  <span className="invalid-feedback d-block">
+                    This field is required
+                  </span>
+                )}
+              </Col>
+              <Col lg={6} md={12} className="mb-4">
+                <input
+                  type="text"
+                  className="form-control"
+                  id="zip"
+                  placeholder="Enter zip code"
+                  name="zipcode"
+                  ref={register({ required: true })}
+                />
+                {errors.zipcode && (
+                  <span className="invalid-feedback d-block">
+                    This field is required
+                  </span>
+                )}
+              </Col>
+            </Form.Row>
+            <Form.Row>
+              <Col lg={12}>
+                <Form.Check
+                  type="checkbox"
+                  label="I accept the terms and conditions"
+                  name="terms"
+                  ref={register({ required: true })}
+                />
+                {errors.terms && (
+                  <span className="invalid-feedback d-block">
+                    You must agree to the terms and conditions
+                  </span>
+                )}
+              </Col>
+              <Col lg={12}>
+                <Form.Check
+                  type="checkbox"
+                  label="Add me to the newsletter"
+                  name="newsLetter"
+                  ref={register}
                 />
               </Col>
             </Form.Row>
             <div>
-              <Form.Label>Choose a username:</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="username"
-                name="userName"
-                onChange={handleChange}
-                value={userInfo.userName}
-              />
-            </div>
-            <div>
-              <Form.Label>Choose a password:</Form.Label>
-              <Form.Control
-                type="password"
-                placeholder="password"
-                name="password"
-                onChange={handleChange}
-              />
-            </div>
-            <div>
-              <Form.Check
-                type="checkbox"
-                label="Add me to the newsletter"
-                name="newsLetter"
-                onClick={handleChange}
-              />
-            </div>
-            <div>
-              <Button variant="dark" onClick={handleClick}>
+              <Button variant="dark" type="submit">
                 Sign Up
               </Button>
             </div>

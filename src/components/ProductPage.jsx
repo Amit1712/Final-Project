@@ -14,7 +14,6 @@ library.add(fab);
 function ItemsCarousel(props) {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5,
     },
@@ -53,7 +52,6 @@ function ItemsCarousel(props) {
 function ProductPage() {
   let { id } = useParams();
   const product = products.find((p) => Number(p.id) === Number(id));
-  console.log(product);
   return (
     <Container fluid>
       <Row className="p-3">
@@ -86,6 +84,12 @@ function ProductPage() {
               <option value="4">4</option>
               <option value="5">5</option>
             </Form.Control>
+            <Form.Label className="d-block">Choose size</Form.Label>
+            <Form.Control as="select" custom>
+              <option value="S">Small</option>
+              <option value="M">Medium</option>
+              <option value="L">Large</option>
+            </Form.Control>
             <div>
               <small>Shipping Fee:</small>
             </div>
@@ -110,7 +114,11 @@ function ProductPage() {
       <Row className="p-3">
         <Col lg={12}>
           <h4>Related Items</h4>
-          <ItemsCarousel products={products} />
+          <ItemsCarousel
+            products={products.filter(
+              (prod) => Number(prod.catID) === Number(product.catID)
+            )}
+          />
         </Col>
       </Row>
     </Container>

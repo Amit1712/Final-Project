@@ -5,16 +5,21 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 
 library.add(fas);
-const itemObj = {
+
+const product = {
+  id: 99,
   name: "Gold Ring",
   price: 159.99,
   src: "http://pngimg.com/uploads/ring/ring_PNG104.png",
+  material: "Gold",
+  size: "M",
+  quantity: 1,
 };
 
 function CartItem() {
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(product.quantity);
 
-  function handleClick(event) {
+  function handleCounterClick(event) {
     const { name } = event.target;
     if (name === "plus") {
       setQuantity(quantity + 1);
@@ -29,7 +34,7 @@ function CartItem() {
       <Col lg={3} md={5} xl={3}>
         <div className="rounded mb-3 mb-md-0">
           <a href="#!">
-            <img alt="blabla" className="img-fluid w-100" src={itemObj.src} />
+            <img alt="blabla" className="img-fluid w-100" src={product.src} />
           </a>
         </div>
       </Col>
@@ -37,22 +42,35 @@ function CartItem() {
         <div>
           <div className="d-flex justify-content-between">
             <div>
-              <h5>{itemObj.name}</h5>
-              <p className="mb-3 text-muted text-uppercase small">
-                Shirt - blue
-              </p>
+              <h5>{product.name}</h5>
               <p className="mb-2 text-muted text-uppercase small">
-                Color: blue
+                Material: {product.material}
               </p>
-              <p className="mb-3 text-muted text-uppercase small">Size: M</p>
+              <p className="mb-3 text-muted text-uppercase small">
+                Size: {product.size}
+              </p>
             </div>
             <div>
-              <div>
-                <Button variant="light" onClick={handleClick} name="minus">
+              <div style={{ textAlign: "center" }}>
+                <Button
+                  variant="light"
+                  onClick={handleCounterClick}
+                  name="minus"
+                >
                   -
                 </Button>
-                <input name="quantity" value={quantity} />
-                <Button variant="light" onClick={handleClick} name="plus">
+                <input
+                  name="quantity"
+                  value={quantity}
+                  readOnly
+                  type="number"
+                  style={{ width: "30%" }}
+                />
+                <Button
+                  variant="light"
+                  onClick={handleCounterClick}
+                  name="plus"
+                >
                   +
                 </Button>
               </div>
@@ -82,7 +100,7 @@ function CartItem() {
             </div>
             <p className="mb-0">
               <span>
-                <strong>${itemObj.price}</strong>
+                <strong>${product.price}</strong>
               </span>
             </p>
           </div>

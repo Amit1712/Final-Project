@@ -8,21 +8,21 @@ function Display() {
         <Carousel.Item className="carouselImg" interval={2000}>
           <img
             className="d-block w-100"
-            src="https://images.pexels.com/photos/5723324/pexels-photo-5723324.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            src="https://themes.zone/wp-content/uploads/2018/11/diamond-city-demo-image-2.png"
             alt="First slide"
           />
         </Carousel.Item>
         <Carousel.Item className="carouselImg" interval={2000}>
           <img
             className="d-block w-100"
-            src="https://image.freepik.com/free-vector/shopping-online-isometric-infographic-flowchart-poster_1284-15255.jpg"
+            src="https://cdn.shopify.com/s/files/1/0323/6057/files/SMALL_BEADED_BANNER3_1200x.jpg?v=1591205012"
             alt="Second slide"
           />
         </Carousel.Item>
         <Carousel.Item className="carouselImg" interval={2000}>
           <img
             className="d-block w-100"
-            src="https://i.ndtvimg.com/mt/cooks/2014-11/carrots.jpg"
+            src="http://manikchandjewellers.com/example/slider2.jpg"
             alt="Third slide"
           />
         </Carousel.Item>
