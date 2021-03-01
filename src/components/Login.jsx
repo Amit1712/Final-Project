@@ -53,7 +53,7 @@ function Login() {
                   </span>
                 )}
               </div>
-              <div>
+              <div className="pl-3-5">
                 <small>
                   <a href="/">I forgot my password</a>
                 </small>
